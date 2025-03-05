@@ -12,16 +12,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: whoop-t
-      url-base: https://github.com/whoop-t
+    - name: whoop-t #new entry
+      url-base: https://github.com/whoop-t #new entry
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-adventure-time
-      remote: whoop-t
-      revision: main
+    - name: nice-adventure-time #new entry
+      remote: whoop-t #new entry
+      revision: main #new entry
   self:
     path: config
 ```
@@ -30,9 +30,9 @@ Add this module to `build.yaml`(this is for corne, but change for your keyboard)
 ```yaml
 include:
   - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_adventure_time
+    shield: corne_left nice_view_adapter nice_adventure_time #update entry
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_adventure_time
+    shield: corne_right nice_view_adapter nice_adventure_time #update entry
 ```
 
 ## Acknowledgements
