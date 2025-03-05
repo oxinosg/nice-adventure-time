@@ -2,7 +2,6 @@
 
 Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 
-https://www.pixilart.com
 
 ## Quick setup
 
@@ -36,3 +35,16 @@ include:
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_adventure_time
 ```
+
+## Acknowledgements
+### Base Repo
+https://github.com/M165437/nice-view-gem
+
+### Making the art
+https://www.pixilart.com
+
+### Coverting art to C code
+https://javl.github.io/image2cpp/
+
+### Other image processing
+https://www.iloveimg.com/
