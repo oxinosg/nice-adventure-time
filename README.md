@@ -1,4 +1,4 @@
-# nice-adventure_time
+# nice-adventure-time
 
 Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 
