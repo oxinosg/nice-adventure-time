@@ -2,7 +2,6 @@
 
 Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 
-
 ## Quick setup
 
 In your ZMK firmware, add the following:
