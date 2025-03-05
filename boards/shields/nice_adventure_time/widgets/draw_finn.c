@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <zephyr/kernel.h>
-#include "finn.h"
+#include "draw_finn.h"
 
 LV_IMG_DECLARE(finn);
 
