@@ -13,6 +13,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/display.h>
 #include <zmk/usb.h>
 
+#include "draw_finn.h"
 #include "animation.h"
 #include "battery.h"
 #include "output.h"
@@ -111,7 +112,7 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
     lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
 
-    draw_animation(widget->obj);
+    draw_jake(widget->obj);
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();
