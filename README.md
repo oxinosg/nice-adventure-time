@@ -2,7 +2,7 @@
 
 Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 
-![Preview](https://github.com/m165437/nice-view-gem/blob/main/.github/assets/fj.jpg?raw=true)
+![Preview](https://github.com/whoop-t/nice-adventure-time/blob/main/.github/assets/fj.jpg?raw=true)
 
 ## Quick setup
 
