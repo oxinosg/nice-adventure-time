@@ -21,8 +21,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include "output.h"
 #include "profile.h"
 #include "screen.h"
-
-LV_IMG_DECLARE(finn);
+#include "draw_finn.h"
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -37,21 +36,6 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
     // Draw widgets
     draw_output_status(canvas, state);
     draw_battery_status(canvas, state);
-
-    // Rotate for horizontal display
-    rotate_canvas(canvas, cbuf);
-}
-
-static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status_state *state) {
-    lv_obj_t *canvas = lv_obj_get_child(widget, 1);
-    fill_background(canvas);
-
-    lv_draw_img_dsc_t img_dsc;
-    lv_draw_img_dsc_init(&img_dsc);
-  
-    // Draw widgets
-    // draw_wpm_status(canvas, state); // REPLACE WITH ART
-    lv_canvas_draw_img(canvas, 64, 64, &finn, &img_dsc);
 
     // Rotate for horizontal display
     rotate_canvas(canvas, cbuf);
@@ -192,6 +176,8 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_t *bottom = lv_canvas_create(widget->obj);
     lv_obj_align(bottom, LV_ALIGN_TOP_RIGHT, BUFFER_OFFSET_BOTTOM, 0);
     lv_canvas_set_buffer(bottom, widget->cbuf3, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+  
+    draw_finn(widget->obj)
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();
