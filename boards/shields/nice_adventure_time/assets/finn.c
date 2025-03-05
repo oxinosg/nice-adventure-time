@@ -68,8 +68,8 @@ const lv_img_dsc_t finn = {
     .header.cf = LV_IMG_CF_INDEXED_1BIT,
     .header.always_zero = 0,
     .header.reserved = 0,
-    .header.w = 69,
-    .header.h = 80,
+    .header.w = 80,
+    .header.h = 69,
     .data_size = 620,
     .data = finn_map,
 };
