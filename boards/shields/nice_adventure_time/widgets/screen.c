@@ -46,9 +46,12 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     lv_obj_t *canvas = lv_obj_get_child(widget, 1);
     fill_background(canvas);
 
+    lv_draw_img_dsc_t img_dsc;
+    lv_draw_img_dsc_init(&img_dsc);
+  
     // Draw widgets
     // draw_wpm_status(canvas, state); // REPLACE WITH ART
-    lv_canvas_draw_img(canvas, 62, 62, &finn);
+    lv_canvas_draw_img(canvas, 62, 62, &finn, &img_dsc);
 
     // Rotate for horizontal display
     rotate_canvas(canvas, cbuf);
