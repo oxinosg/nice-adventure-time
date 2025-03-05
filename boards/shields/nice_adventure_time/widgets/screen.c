@@ -22,6 +22,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include "profile.h"
 #include "screen.h"
 
+LV_IMG_DECLARE(finn);
+
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 /**
@@ -46,6 +48,7 @@ static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status
 
     // Draw widgets
     // draw_wpm_status(canvas, state); // REPLACE WITH ART
+    lv_canvas_draw_img(canvas, 62, 62, &finn);
 
     // Rotate for horizontal display
     rotate_canvas(canvas, cbuf);
