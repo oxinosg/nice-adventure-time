@@ -7,6 +7,7 @@ Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 Battery Low States
 
 https://imgur.com/a/D8mO9lx
+https://imgur.com/a/hO7D5RB
 
 ## Quick setup
 
