@@ -4,7 +4,7 @@
 
 LV_IMG_DECLARE(finn);
 
-void draw_finn(lv_obj_t *canvas) {
+void draw_finn(lv_obj_t *canvas, const struct status_state *state) {
     lv_obj_t *art = lv_img_create(canvas);
 
     lv_img_set_src(art, &finn);
