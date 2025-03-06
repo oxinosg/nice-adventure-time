@@ -50,6 +50,7 @@ static void set_battery_status(struct zmk_widget_screen *widget,
     widget->state.battery = state.level;
 
     draw_top(widget->obj, widget->cbuf, &widget->state);
+    draw_jake(widget->obj, &widget->state);
 }
 
 static void battery_status_update_cb(struct battery_status_state state) {
@@ -111,8 +112,6 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_t *top = lv_canvas_create(widget->obj);
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
     lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
-
-    draw_jake(widget->obj);
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();
