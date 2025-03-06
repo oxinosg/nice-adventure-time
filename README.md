@@ -4,6 +4,10 @@ Fork of https://github.com/M165437/nice-view-gem that adds Adventure Time images
 
 ![Preview](https://github.com/whoop-t/nice-adventure-time/blob/main/.github/assets/fj.jpg?raw=true)
 
+Battery Low States
+
+https://imgur.com/a/D8mO9lx
+
 ## Quick setup
 
 In your ZMK firmware, add the following:
