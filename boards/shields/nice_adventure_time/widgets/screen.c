@@ -42,7 +42,7 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
 }
 
 static void draw_bottom(lv_obj_t *widget, lv_color_t cbuf[], const struct status_state *state) {
-    lv_obj_t *canvas = lv_obj_get_child(widget, 2);
+    lv_obj_t *canvas = lv_obj_get_child(widget, 1);
     fill_background(canvas);
 
     // Draw widgets
